@@ -7,7 +7,7 @@ Handlebars.registerHelper(
 		if (wrap) {
 			return "<i class='wrap'>" + text + "</i>";
 		} else {
-			return text;
+			return (text.match(/\n/g)) ? "<pre>" + text + "</pre>" : text;
 		}
 	}
 );
